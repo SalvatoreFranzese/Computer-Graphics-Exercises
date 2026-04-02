@@ -1,0 +1,7 @@
+# Visual studio Code files
+.vscode/
+*.code-workspace
+
+# C compilation files
+*.out
+*.exe
