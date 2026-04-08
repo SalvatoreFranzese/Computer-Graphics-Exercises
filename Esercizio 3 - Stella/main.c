@@ -158,12 +158,12 @@ int main(int argc, char** argv)
     glutCreateWindow("Star");
 
     printf("==== Star Controls ====\n");
-    printf("WASD -> Translate.\n");
-    printf("← → -> Rotate.\n");
-    printf("↑ ↓ -> Scale.\n");
-    printf("Mouse move -> Translate (follow mouse).\n");
-    printf("Mouse drag -> Rotate + Scale.\n");
-    printf("ESC -> Exit the program\n\n");
+    printf("WASD        -> Translate.\n");
+    printf("← →         -> Rotate.\n");
+    printf("↑ ↓         -> Scale.\n");
+    printf("Mouse move  -> Translate (follow mouse).\n");
+    printf("Mouse drag  -> Rotate + Scale.\n");
+    printf("ESC         -> Exit the program.\n\n");
 
     glutDisplayFunc(drawScene);
 

@@ -12,7 +12,7 @@ void checkError(const char* label)
     }
 }
 
-void drawColoredCircle(float centerX, float centerY, float radius, int segments, float r, float g, float b)
+void drawCircle(float centerX, float centerY, float radius, int segments, float r, float g, float b)
 {
     glColor3f(r, g, b);
     glBegin(GL_POLYGON);
@@ -69,8 +69,8 @@ void drawRadialGradientExagon(void)
 void drawCircleWithInnerBlackCircle(void)
 {
     glClear(GL_COLOR_BUFFER_BIT);
-    drawColoredCircle(0.0, 0.0, 0.5, 20, 0.0, 0.0, 1.0); // Cerchio di colore blu
-    drawColoredCircle(0.0, 0.0, 0.2, 20, 0.0, 0.0, 0.0); // Cerchio di colore nero
+    drawCircle(0.0, 0.0, 0.5, 20, 0.0, 0.0, 1.0); // Cerchio di colore blu
+    drawCircle(0.0, 0.0, 0.2, 20, 0.0, 0.0, 0.0); // Cerchio di colore nero
     glFlush();
 }
 
@@ -79,7 +79,7 @@ void drawGradientCircleWithInnerBlackCircle(void)
 {
     glClear(GL_COLOR_BUFFER_BIT);
     drawRadialGradientCircle(0.0, 0.0, 0.5, 20); // Cerchio di colore blu con rosso sfumato
-    drawColoredCircle(0.0, 0.0, 0.2, 20, 0.0, 0.0, 0.0); // Cerchio di colore nero
+    drawCircle(0.0, 0.0, 0.2, 20, 0.0, 0.0, 0.0); // Cerchio di colore nero
     glFlush();
 }
 
@@ -120,11 +120,11 @@ int main(int argc, char** argv)
 
     printf("==== Circle Exercises ====\n");
     printf("Press a key to select an exercise:\n");
-    printf("1 -> Exercise 1 - Circle with radial gradient.\n");
-    printf("2 -> Exercise 2 - Hexagon with radial gradient.\n");
-    printf("3 -> Exercise 3 - Blue circle with inner black circle.\n");
-    printf("4 -> Exercise 4 - Radial gradient circle + inner black circle.\n");
-    printf("ESC -> Exit the program\n\n");
+    printf("1    -> Exercise 1 - Circle with radial gradient.\n");
+    printf("2    -> Exercise 2 - Hexagon with radial gradient.\n");
+    printf("3    -> Exercise 3 - Blue circle with inner black circle.\n");
+    printf("4    -> Exercise 4 - Radial gradient circle + inner black circle.\n");
+    printf("ESC  -> Exit the program.\n\n");
 
     drawGradientCircle();
 

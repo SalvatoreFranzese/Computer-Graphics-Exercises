@@ -171,9 +171,9 @@ int main(int argc, char** argv)
     glutCreateWindow("Prism");
 
     printf("==== Prism Controls ====\n");
-    printf("+ / - -> Zoom in / out.\n");
-    printf("Mouse drag -> Rotate the prism along X and Y axes.\n");
-    printf("ESC -> Exit the program\n\n");
+    printf("+ / -       -> Zoom in / out.\n");
+    printf("Mouse drag  -> Rotate the prism along X and Y axes.\n");
+    printf("ESC         -> Exit the program.\n\n");
 
     // Abilita il test di profondità
     glEnable(GL_DEPTH_TEST);
