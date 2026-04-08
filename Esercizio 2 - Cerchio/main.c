@@ -12,7 +12,7 @@ void checkError(const char* label)
     }
 }
 
-void drawCircle(float centerX, float centerY, float radius, int segments, float r, float g, float b)
+void drawColoredCircle(float centerX, float centerY, float radius, int segments, float r, float g, float b)
 {
     glColor3f(r, g, b);
     glBegin(GL_POLYGON);
@@ -69,8 +69,8 @@ void drawRadialGradientExagon(void)
 void drawCircleWithInnerBlackCircle(void)
 {
     glClear(GL_COLOR_BUFFER_BIT);
-    drawCircle(0.0, 0.0, 0.5, 20, 0.0, 0.0, 1.0); // Cerchio di colore blu
-    drawCircle(0.0, 0.0, 0.2, 20, 0.0, 0.0, 0.0); // Cerchio di colore nero
+    drawColoredCircle(0.0, 0.0, 0.5, 20, 0.0, 0.0, 1.0); // Cerchio di colore blu
+    drawColoredCircle(0.0, 0.0, 0.2, 20, 0.0, 0.0, 0.0); // Cerchio di colore nero
     glFlush();
 }
 
@@ -79,7 +79,7 @@ void drawGradientCircleWithInnerBlackCircle(void)
 {
     glClear(GL_COLOR_BUFFER_BIT);
     drawRadialGradientCircle(0.0, 0.0, 0.5, 20); // Cerchio di colore blu con rosso sfumato
-    drawCircle(0.0, 0.0, 0.2, 20, 0.0, 0.0, 0.0); // Cerchio di colore nero
+    drawColoredCircle(0.0, 0.0, 0.2, 20, 0.0, 0.0, 0.0); // Cerchio di colore nero
     glFlush();
 }
 

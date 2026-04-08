@@ -27,7 +27,7 @@ void checkError(const char* label)
 }
 
 // Disegna una circonferenza piena sul piano XY con coordinata Z
-void drawCircle(float centerX, float centerY, float zNear, float radius, int segments, float r, float g, float b)
+void drawColoredCircle(float centerX, float centerY, float zNear, float radius, int segments, float r, float g, float b)
 {
     glColor3f(r, g, b);
     glBegin(GL_POLYGON);
@@ -39,7 +39,7 @@ void drawCircle(float centerX, float centerY, float zNear, float radius, int seg
             glVertex3f(centerX + x, centerY + y, zNear);
         }
     glEnd();
-    checkError("drawCircle");
+    checkError("drawColoredCircle");
 }
 
 // Disegna le facce laterali del prisma
@@ -100,13 +100,13 @@ void drawScene(void)
     float zFar = 0.5f * depthFactor; // Base più lontana
 
     // Disegno della base inferiore
-    drawCircle(0.2, 0.2, zNear, 0.5f, 8, 1.0, 0.0, 0.0);
+    drawColoredCircle(0.2, 0.2, zNear, 0.5f, 8, 1.0, 0.0, 0.0);
 
     // Disegno facce laterali del prisma
     drawQuad(0.2f, 0.2f, zNear, zFar, 0.5f, 8, 0.0f, 1.0f, 0.0f);
 
     // Disegno della base superiore
-    drawCircle(0.2, 0.2, zFar, 0.5f, 8, 0.0, 0.0, 1.0);
+    drawColoredCircle(0.2, 0.2, zFar, 0.5f, 8, 0.0, 0.0, 1.0);
 
     glFlush();
     checkError("drawScene");
